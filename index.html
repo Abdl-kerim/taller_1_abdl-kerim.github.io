@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="es-es">
+     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+		<link rel="shortcut icon" href="./favicon.ico">
+		<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="./android-chrome-192x192.png">
+		<meta name="theme-color" content="#051424">
+        <link rel="stylesheet" href="./style.css">
+
+        <title>Titulo | en pesta&ntilde;a</title>
+     </head>
+     <body>
+        <main id="main">
+            <h1 id="main_h1">Introducci&oacute;n a HTML5 y CSS3</h1>
+            <section class="sections">
+                <h2 class="bloque section_h2">HTML5</h2>
+                <h3>
+                    ¿Qué significa HTML?
+                </h3>
+                <p>
+                    <abbr title="HyperText Markup Language">HTML</abbr> es el acrónimo en ingles de <cite>HyperText Markup Language</cite>, que en espa&ntilde;ol se traduciría como <cite>Lenguaje de Marcado de Hipertexto</cite>.
+                </p>
+                
+                <h3>
+                    ¿Qué es HTML?
+                </h3>
+                <p>
+                    <abbr title="HyperText Markup Language">HTML</abbr> es un lenguaje de marcado interpretado por el navegador del cliente.
+                </p>
+                <p>
+                    El lenguaje se compone principalmente de <strong>etiquetas</strong> y <strong>atributos</strong>, lo cual facilita tanto su comprensión a la hora de aprenderlo, como su lectura a la hora de revisar el código. 
+                </p>
+                <h3>
+                    ¿Para que se utiliza HTML?
+                </h3>
+                <p>
+                    El uso principal de <abbr title="HyperText Markup Language">HTML</abbr> es el de dar una estructura a la página.
+                </p>
+                <h3>
+                    Breve historia sobre HTML
+                </h3>
+                <p>
+                    <abbr title="HyperText Markup Language">HTML</abbr> apareció gracias a la necesidad de compartir documentos entre diferentes organizaciones sin tener que adaptar de forma significativa la información para que esta fuese accesible desde diferentes ordenadores.
+                </p>
+                <p>
+                    A principios de los 90 Tim Berners-Lee publicó la primera descripción oficial de <abbr title="HyperText Markup Language">HTML</abbr>, lo que marcó el inicio del desarrollo de <abbr title="HyperText Markup Language">HTML</abbr> y de la <abbr title="World Wide Web">WWW</abbr> que serían mantenidos por el <abbr title="World Wide Web Consortium">W3C</abbr>.
+                </p>
+                <p>
+                    En el a&ntilde;o 1998 fué cuando se implanto junto a la versión 4.0 de <abbr title="HyperText Markup Language">HTML</abbr> el uso de las hojas de estilo o <abbr title="Cascading Style Sheet">CSS</abbr> y la capacidad de ejecutar <strong>scripts</strong> del lado del cliente.
+                </p>
+                <p>
+                    Actualmente la organización que mantiene el lenguaje se llama <abbr title="Web Hypertext Application Technology Working Group">WHATWG</abbr> la cual está compuesta por integrantes de <strong>Apple</strong>, la <strong>Fundación Mozilla</strong> y <strong>Opera Software</strong>.
+                </p>
+                <p class="notas">
+                    <strong>NOTA!</strong> Al ser un lenguaje interpretado de lado del cliente, siempre debemos tener en cuenta pueden haber navegadores que no reconozcan ciertas propiedades de css, lo que genera fallos inesperados al cargar la web en esos navegadores.
+                </p>
+            </section>
+
+            <section class="sections">
+                <h1 id="main_h1">
+                    Creaci&oacute;n de un archivo HTML
+                </h1>
+                <p>
+                    Para crear un archivo <abbr title="Hypertext Markup Language">HTML</abbr> solo necesitamos un editor de texto cualquiera.
+                </p>
+                <p>
+                    A continuaci&oacute;n se expondr&aacute;n el proceso de creaci&oacute;n de un documento <abbr title="Hypertext Markukp Language">HTML</abbr> en orden:
+                </p>
+                <ol>
+                    <li>
+                        Crear un <strong>documento de texto</strong> nuevo
+                    </li>
+
+                    <li>
+                        A&ntilde;adir las <strong>etiquetas</strong> necesarias y opcionales en caso de haberlas
+                    </li>
+
+                    <li>
+                        A la hora de guardar el documento, pulsaremos en <strong>guardar como</strong>
+                    </li>
+
+                    <li>
+                        y cuando se muestre el <strong>nombre</strong> y <strong>tipo de archivo</strong>, en la secci&oacute;n tipo elegiremos <em class="atributos">todos los archivos</em>
+                    </li>
+
+                    <li>
+                        finalmente en la secci&oacute;n <strong>nombre</strong> elegiremos el nombre de nuestro archivo pero al final a&ntilde;adiremos <em class="atributos">.html</em> 
+                    </li>
+
+                    <li>
+                        pulsamos en <strong>guardar</strong> y listo.
+                    </li>
+
+                    <li>
+                        En caso de querer modificar el archivo solamente tenemos que hacer click derecho sobre el archivo y abrirlo con un editor de texto. Cuando hayas terminado de modificarlo solo vuelve a repetir los pasos anteriores en orden.
+                    </li>
+                </ol>
+                <p>
+                    Todo archivo <abbr title="Hypertext Markup Language">HTML</abbr> se compondr&aacute; como m&iacute;nimo de&colon;
+                </p>
+<pre>
+
+    &lt;<code>!DOCTYPE</code> <span>html</span>&gt;
+        &lt;<code>html</code> <span class="atributos">lang=</span>"<span>es-es</span>"&gt;
+
+          &lt;<code>head</code>&gt;
+              &lt;<code>meta</code> <span class="atributos">charset=</span>"<span>utf-8</span>"&gt;
+              &lt;<code>meta</code> 
+                  <span class="atributos">name=</span>"<span>viewport</span>" 
+                  <span class="atributos">content=</span>"
+                    <span>width=device-width, 
+                    initial-scale=1.0</span>"&gt;
+              &lt;<code>title</code>&gt;Titulo Pesta&ntilde;a&lt;/<code>title</code>&gt;
+          &lt;/<code>head</code>&gt;
+ 
+          &lt;<code>body</code>&gt;
+             &lt;<span class="comentarios">!--Recomendable a&ntilde;adir header--</span>&gt;      
+              &lt;<code>header</code>&gt;
+              &lt;/<code>header</code>&gt;
+                
+             &lt;<span class="comentarios">!--Recomendable a&ntilde;adir main--</span>&gt;
+              &lt;<code>main</code>&gt;
+              &lt;/<code>main</code>&gt;
+                
+             &lt;<span class="comentarios">!--Recomendable a&ntilde;adir footer--</span>&gt;
+              &lt;<code>footer</code>&gt;
+              &lt;/<code>footer</code>&gt;
+          &lt;/<code>body</code>&gt;
+
+        &lt;/<code>html</code>&gt;
+
+</pre>
+                <h3>
+                    Significado de cada una de las etiquetas y atributos
+                </h3>
+                <ol>
+                    <li>
+                        <code class="li_code">!DOCTYPE</code>: La etiqueta <strong>!DOCTYPE</strong> sirve para definir el tipo de documento que vamos a utilizar, a&ntilde;adiendo al lado derecho el valor correspondiente. En este caso <span>html</span>.
+                    </li>
+
+                    <li>
+                        <code class="li_code">html</code>: La siguiente etiqueta, <strong>html</strong> es la que alojar&aacute; todo el contenido que vamos a definir.
+                        <ul>
+                            <li>
+                                El atributo <span class="atributos">lang=</span>"<span>es-es</span>", define el idioma principal del documento/p&aacute;gina. En este caso se est&aacute; usando <span>es-es</span> porque queremos que el idioma principal sea el castellano y el pais Espa&ntilde;a, pero se puede cambiar por el idioma y pais que se desee en caso de estar usando otro dialecto o idioma. Lo &uacute;nico que el valor deber&aacute; estar en formato <abbr title="International Organization for Standarization">ISO 639-1</abbr> como en el ejemplo.
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <code class="li_code">head</code>: Aqu&iacute; se agrupar&aacute;n todas las etiquetas de "configuraci&oacute;n" y carga de archivos como pueden ser las meta etiquetas y las hojas de estilos entre otras.
+                    </li>
+
+                    <li>
+                        <code class="li_code">meta</code>: Las <strong>meta</strong> etiquetas son las encargadas de definir la mayor parte de los "ajustes" de la p&aacute;gina, estas etiquetas siempre ir&aacute;n acompa&ntilde;adas de alg&uacute;n atributo o valor. Algunos atributos pueden ir acompa&ntilde;ados de un nombre(<span class="atributos">name=</span>) que ser&aacute; el encargado de definir el uso del atributo.
+                        <ul>
+                            <li>
+                                El atributo <span class="atributos">charset=</span>"<span>utf-8</span>", es el encargado de establecer el tipo de codificaci&oacute;n que usar&aacute; la p&aacute;gina/documento. En este caso estamos haciendo uso de la codificaci&oacute;n <span>utf-8</span>. Esta etiqueta deber&aacute; ser la primera que se a&ntilde;ada dentro de la etiqueta <strong>head</strong>.
+                            </li>
+                            <li>
+                                El atributo <span class="atributos">content=</span>"<span>width=device-width, initial-scale=1.0</span>" ir&aacute; siempre acompa&ntilde;ado del nombre <span class="atributos">name=</span>"<span>viewport</span>" al principio. Sirve para que el navegador cargue la p&aacute;gina en base al tama&ntilde;o de la pantalla y con un zoom del 100%. Aunque se pueden cambiar los valores no es lo aconsejable.
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <code class="li_code">title</code>: El texto que contenga la etiqueta <strong>title</strong> es el que se mostrar&aacute; en la pesta&ntilde;a del navegador y en los resultados de b&uacute;squeda. Lo ideal es que el texto tenga entre 40 a 70 caracteres como m&aacute;ximo.
+                    </li>
+
+                    <li>
+                        <code class="li_code">body</code>: Aqu&iacute; se agrupar&aacute; todo el contenido que queremos mostrar en nuestro documento o p&aacute;gina.
+                    </li>
+
+                    <li>
+                        De forma opcional pero muy recomendable, se pueden a&ntilde;adir las siguientes etiquetas para que el documento tenga una semantica perfecta:
+                        <ul>
+                            <li>
+                                <code class="li_code">header</code>: Dentro del header normalmente se incluye el logotipo, la barra de navegaci&oacute;n, el t&iacute;tulo de la p&aacute;gina y elementos similares.
+                            </li>
+
+                            <li>
+                                <code class="li_code">main</code>: La etiqueta <strong>main</strong> agrupar&aacute; el contenido principal de la p&aacute;gina o documento.
+                            </li>
+
+                            <li>
+                                <code class="li_code">footer</code>: Finalmente la etiqueta <strong>footer</strong> normalmente agrupa elementos como los links de contacto, los derechos de la p&aacute;gina, etc.
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>
+                    Cuando se quiere hacer uso de los comentarios dentro del c&oacute;digo podemos encerrar el texto o c&oacute;digo dentro de las etiquetas <span class="comentarios"> &lt;!-- comentario --&gt; </span>, podemos hacer uso de cuantos comentarios queramos pero cuidado con comentar elementos sensibles ya que todo lo que se escriba se mostrar&aacute; en la consola del navegador.
+                </p>
+                <p class="notas">
+                    <strong class="f">NOTA!</strong> Las etiquetas mostradas en este apartado no se deben de repetir dentro de un mismo documento.
+                </p>
+
+                <p class="notas">
+                    <strong class="f">NOTA!</strong> Muy importante el orden de dispocisi&oacute;n de las etiquetas deber&aacute; ser igual al expuesto recientemente.
+                </p>
+
+                <p class="ejercicios">
+                    <strong>Ejercicio:</strong> Crear un documento <abbr title="Hypertext Markup Language">HTML</abbr>, a&ntilde;adir las etiquetas mostradas, personalizar el t&iacute;tulo de la p&aacute;gina, guardarlo como un archivo html y abrirlo en el navegador para ver si has cambiado el t&iacute;tulo de tu documento.
+                </p>
+
+            </section>
+
+
+            <section class="sections">
+                <h1 id="main_h1">
+                    Etiquetas básicas de HTML
+                </h1>
+                <p>
+                    Aunque sea un punto de vista personal, las etiquetas que más se utilizan dentro de casi cualquier documento <abbr title="Hypertext Markup Language">HTML</abbr> son: 
+                    <code>h1</code> a <code>h6</code>, 
+                    <code>p</code>, 
+                    <code>strong</code>, 
+                    <code>em</code>, 
+                    <code>ul</code>, 
+                    <code>ol</code>.
+                </p>
+<p>
+    La etiquetas <code>h1</code>,<code>h2</code>,<code>h3</code>,<code>h4</code>,<code>h5</code>,<code>h6</code> se utilizan únicamente para los encabezados. 
+</p>
+<p>
+    Los números que se encuentran a la derecha de la <code>h</code> se añaden secuencialmente conforme hagamos uso de las etiquetas, empezando siempre por el <code>h1</code> y terminando con el <code>h6</code>.
+</p>
+<p>
+    Podemos repetir todas las veces que sea necesario un tipo de encabezado concreto. 
+</p>
+<pre>
+
+    &lt;<code>h1</code>&gt;<h1>Encabezado 1</h1>&lt;/<code>h1</code>&gt;
+
+    &lt;<code>h2</code>&gt;<h2>Encabezado 2</h2>&lt;/<code>h2</code>&gt;
+    
+    &lt;<code>h3</code>&gt;<h3>Encabezado 3</h3>&lt;/<code>h3</code>&gt;
+    
+    &lt;<code>h4</code>&gt;<h4>Encabezado 4</h4>&lt;/<code>h4</code>&gt;
+    
+    &lt;<code>h5</code>&gt;<h5>Encabezado 5</h5>&lt;/<code>h5</code>&gt;
+    
+    &lt;<code>h6</code>&gt;<h6>Encabezado 6</h6>&lt;/<code>h6</code>&gt;
+
+</pre>
+
+<p>
+    <strong>Ejemplo 1:</strong> hacemos uso de un encabezado <code>h1</code> para el titulo principal del documento y para el resto de "bloques de texto" usamos <code>h2</code> 
+</p> 
+<pre>
+
+    &lt;<code>h1</code>&gt;<h1>Título de la página</h1>&lt;/<code>h1</code>&gt;
+
+    &lt;<code>h2</code>&gt;<h2>Encabezado independiente 1</h2>&lt;/<code>h2</code>&gt;
+    <p>Bloque de texto independiente.</p>
+
+    &lt;<code>h2</code>&gt;<h2>Encabezado independiente 2</h2>&lt;/<code>h2</code>&gt;
+    <p>Bloque de texto independiente.</p>
+
+</pre>
+
+<p>
+    <strong>Ejemplo 2:</strong> Usamos el <code>h1</code> para el encabezado de la página y conforme vamos creando subsecciones independientes dentro de un bloque de texto vamos subiendo el número de la derecha de la <code>h</code> secuencialmente. 
+</p> 
+<pre>
+
+    &lt;<code>h1</code>&gt;<h1>Título de la página</h1>&lt;/<code>h1</code>&gt;
+
+    &lt;<code>h2</code>&gt;<h2>Encabezado independiente 1</h2>&lt;/<code>h2</code>&gt;
+    <p>Bloque de texto independiente.</p>
+    <p>Bloque de texto independiente.</p>
+        &lt;<code>h3</code>&gt;<h3>SubEncabezado independiente 1</h3>&lt;/<code>h3</code>&gt;
+        <p>Bloque de texto independiente.</p>
+        <p>Bloque de texto independiente.</p>
+
+    &lt;<code>h2</code>&gt;<h2>Encabezado independiente 1</h2>&lt;/<code>h2</code>&gt;
+    <p>Bloque de texto independiente.</p>
+    <p>Bloque de texto independiente.</p>
+        &lt;<code>h3</code>&gt;<h3>SubEncabezado independiente 1</h3>&lt;/<code>h3</code>&gt;
+        <p>Bloque de texto independiente.</p>
+        <p>Bloque de texto independiente.</p>
+
+</pre>
+            </section>
+
+            <section class="sections">
+<p>
+    Todos los parrafos o bloques de texto se deberán de agrupar entre las etiquetas <code>p</code>.
+</p>
+<p>
+    <strong>Ejemplo 1:</strong> Creación de un parrafo. 
+</p>
+<pre>
+
+    &lt;<code>p</code>&gt;
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Aliquid nam deserunt earum facilis explicabo praesentium 
+      aspernatur officiis quaerat enim debitis, 
+      voluptate consectetur temporibus repellendus eius fugit 
+      quam provident et magnam?
+    &lt;/<code>p</code>&gt;
+
+</pre>
+<p>
+    <strong>Ejemplo 2:</strong> Creación de varios parrafos independientes. 
+</p>
+<pre>
+
+    &lt;<code>p</code>&gt;
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    &lt;/<code>p</code>&gt;
+
+    &lt;<code>p</code>&gt;
+      Aliquid nam deserunt earum facilis explicabo praesentium 
+      aspernatur officiis quaerat enim debitis, 
+      voluptate consectetur temporibus repellendus eius fugit 
+      quam provident et magnam?
+    &lt;/<code>p</code>&gt;
+
+</pre>
+<p class="ejercicios">
+    <strong>Ejercicio 1</strong> Crea un título haciendo uso del primer encabezado y debajo añade una frase. 
+ </p>
+ <p class="ejercicios">
+    <strong>Ejercicio 2</strong> Crea un título haciendo uso del segundo encabezado, debajo añade varias frases independientes, luego añade un subtítulo y finalmente añade una frase final. 
+ </p>
+            </section>
+
+            <section class="sections">
+<p>
+    La etiqueta <code>strong</code> se utiliza cuando queremos que una palabra que tiene especial importancia sea resaltada visualmente y también sea resaltada cuando el cliente haga uso de un lector de pantalla.  
+</p>
+<pre>    
+    &lt;<code>p</code>&gt;
+      Lorem ipsum &lt;<code>strong</code>&gt;<strong>dolor</strong>&lt;/<code>strong</code>&gt;, 
+      sit amet consectetur adipisicing elit.
+    &lt;/<code>p</code>&gt;
+
+</pre>
+<p>
+    <strong>Ejemplo 1:</strong> Resaltando una palabra en una frase.
+</p>
+<pre>
+
+    &lt;<code>p</code>&gt; 
+      Eres lo &lt;<code>strong</code>&gt;<strong>mejor</strong>&lt;/<code>strong</code>&gt;.
+    &lt;/<code>p</code>&gt;
+
+</pre>
+<p>
+    <strong>Ejemplo 2:</strong> Resaltando varias palabras en una frase.
+</p>
+<pre>
+
+    &lt;<code>p</code>&gt; 
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+      &lt;<code>strong</code>&gt;<strong>dolor sit</strong>&lt;/<code>strong</code>&gt; 
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit 
+      &lt;<code>strong</code>&gt;<strong>dolor sit</strong>&lt;/<code>strong</code>&gt;.
+    &lt;/<code>p</code>&gt;
+
+</pre>
+            </section>
+
+            <section class="sections">
+<p>
+    Las palabras que tienen enfasis se deben de encerrar dentro de las etiquetas <code>em</code> 
+</p>
+<pre>    
+    &lt;<code>p</code>&gt;
+      Lorem ipsum &lt;<code>em</code>&gt;<em>dolor</em>&lt;/<code>em</code>&gt;, 
+      sit amet consectetur adipisicing elit.
+    &lt;/<code>p</code>&gt;
+    
+</pre>
+<p>
+    <strong>Ejemplo 1:</strong> Enfatizando una palabra en una frase.
+</p>
+<pre>
+
+    &lt;<code>p</code>&gt; 
+      Eres lo &lt;<code>strong</code>&gt;<strong>mejor</strong>&lt;/<code>strong</code>&gt;.
+    &lt;/<code>p</code>&gt;
+
+</pre>
+<p>
+    <strong>Ejemplo 2:</strong> Enfatizando varias palabras en una frase.
+</p>
+<pre>
+
+    &lt;<code>p</code>&gt; 
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+      &lt;<code>em</code>&gt;<em>dolor sit</em>&lt;/<code>em</code>&gt; 
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit 
+      &lt;<code>em</code>&gt;<em>dolor sit</em>&lt;/<code>em</code>&gt;.
+    &lt;/<code>p</code>&gt;
+
+</pre>
+<p class="ejercicios">
+    <strong>Ejercicio 1</strong> Crea una frase y haciendo uso de la etiqueta correcta resalta la o las palabras que tengan más importancia dentro de la frase.
+</p>
+<p class="ejercicios">
+    <strong>Ejercicio 2</strong> Crea una frase y haciendo uso de la etiqueta correcta resalta la o las palabras que tengan un énfasis especial dentro de la frase.
+</p>
+            </section>
+
+            <section class="sections">
+<p>
+    A la hora de crear una lista de elementos, podemos utilizar:
+    <ul>
+        <li>
+            <code>ul</code>: Para casos en los que los elementos <strong>no</strong> sigan un orden secuencial.
+        </li>
+        <li>
+            <code>ol</code>: Para casos en los que los elementos <strong>si</strong> sigan un orden secuencial.
+        </li>
+    </ul>
+</p>
+<p>
+    Aunque hay que tener en cuenta de que la elección de estas dos etiquetas, es algo subjetivo, porque hay casos en los que se podrá hacer uso tanto de una lista <code>ol</code> como de una lista <code>ul</code>.
+</p>
+<p>
+    Sin importar el tipo de lista que usemos <code>ul</code>, <code>ol</code>, los elmentos siempre irán encerrados entre las etiquetas <code>li</code>
+</p>
+<p>
+    <strong>Ejemplo 1:</strong> Creación de una lista de la compra. Haciendo uso de una lista desordenada.
+</p>
+<pre>
+
+    &lt;<code>ul</code>&gt;
+        &lt;<code>li</code>&gt;Manzanas&lt;/<code>li</code>&gt;
+        &lt;<code>li</code>&gt;Peras&lt;/<code>li</code>&gt;
+        &lt;<code>li</code>&gt;Aguacates&lt;/<code>li</code>&gt;
+    &lt;/<code>ul</code>&gt;
+
+</pre>
+
+<p>
+    <strong>Ejemplo 2:</strong> Creación de una lista que muestra los pasos de una receta. Haciendo uso de una lista ordenada.
+</p>
+<pre>
+
+    &lt;<code>ol</code>&gt;
+        &lt;<code>li</code>&gt;Verter 100ml de leche&lt;/<code>li</code>&gt;
+        &lt;<code>li</code>&gt;Añadir 2 cucharadas de Cola Cao&lt;/<code>li</code>&gt;
+        &lt;<code>li</code>&gt;Remover bien&lt;/<code>li</code>&gt;
+    &lt;/<code>ol</code>&gt;
+
+</pre>
+<p class="ejercicios">
+    <strong>Ejercicio 1</strong> Crea una lista desordenada que contenga 5 elementos. 
+</p>
+<p class="ejercicios">
+    <strong>Ejercicio 2</strong> Crea una lista ordenada que contenga 5 elementos. 
+</p>
+<p class="notas">
+    <strong>NOTA</strong> Te aconsejo que observes las diferencias que hay entre las etiquetas <code>strong</code> y <code>em</code> y las diferencias que hay entre las etiquetas <code>ul</code> y <code>ol</code>, ya que altera visualmente los elementos.
+</p>
+            </section>
+
+
+
+
+
+
+
+            <section class="sections">
+                <h2 class="bloque section_h2">CSS3</h2>
+                <h3>
+                    ¿Qué significa CSS?
+                </h3>
+                <p>
+                    <abbr title="Cascading Style Sheet">CSS</abbr> es la abreviatura de <cite>Cascading Style Sheet</cite> que en castellano significa <cite>Hojas de Estilo en Cascada</cite> 
+                </p>
+                <h3>
+                    ¿Qué es CSS y para qué se utiliza?
+                </h3>
+                <p>
+                    <abbr title="Cascading Style Sheet">CSS</abbr> es un lenguaje de estilos en cascada, lo que significa que se ejecuta desde arriba hacia abajo, sobreescribiendo las declaraciones anteriores en caso de que ambas tengan la misma preferencia. <abbr title="Cascading Style Sheet">CSS</abbr> se utiliza para dar forma y color a las distintas etiquetas <abbr title="HyperText Markup Language">HTML</abbr> que hayamos definido.
+                </p>
+                <p>
+                    <abbr title="Cascading Style Sheet">CSS</abbr> está compuesto principalmente de <strong>selectores</strong> y <strong>reglas</strong> que agrupan las distintas <strong>declaraciones</strong>.
+                </p>
+                <p>
+                    Significado de:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Declaraciones:</strong> Las declaraciones son las instrucciones que van a definir como se debe representar un elemento especifico. <br> Todas las declaraciones se compondrán de dos elementos:
+                        <ol>
+                            <li>
+                                La <strong>propiedad</strong>: <span class="css_style">background</span>, <span class="css_style">color</span>, <span class="css_style">font</span>...
+                            </li>
+
+                            <li>
+                                El <strong>valor</strong>: <span style="color: red;">red</span>, <span style="color: cyan;">cyan</span>, <span>10</span><span style="color: lightpink">px</span>...
+                            </li>
+                        </ol>
+                        Todas las declaraciones separarán las <strong>propiedades</strong> de los <strong>valores</strong> mediante el uso de <strong>dos puntos</strong> y siempre se dará por finalizada una declaración cuando se añada un <strong>punto y coma</strong> al final de la declaración:
+                        <ul>
+                            <li style="list-style-type: none;">
+                                <span class="css_style">propiedad</span> <code style="font-weight:900;color: white;font-size: 20px;">:</code> <span style="color:violet">valor</span> <strong style="color: white; font-size: 20px;">;</strong>
+                            </li>
+                            <li style="list-style-type: none;">
+                                <strong>Ejemplo:</strong>
+                                <span class="css_style">background-color</span> <code style="font-weight:900;color: white;font-size: 20px;">:</code> <span style="color:cyan">cyan</span> <strong style="color: white; font-size: 20px;">;</strong>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>reglas:</strong> Una regla es la agrupación de una o varias <strong>declaraciones</strong> dentro de unas <strong>llaves</strong>:
+                        <ul>
+<pre>
+
+    <strong>{</strong> declaraciones <strong>}</strong>
+
+    <strong style="color: goldenrod;">{</strong>
+        <span class="css_style">background-color</span> <code style="font-weight:900;color: white;font-size: 20px;">:</code> <span style="color:lightgray">lightgray</span> <strong style="color: white; font-size: 20px;">;</strong>
+        <span class="css_style">font-size</span> <code style="font-weight:900;color: white;font-size: 20px;">:</code> <span style="color: lightpink">20px</span> <strong style="color: white; font-size: 20px;">;</strong>
+        <span class="css_style">font-family</span> <code style="font-weight:900;color: white;font-size: 20px;">:</code> <span style="color: var(--p_color_2);">Verdana, Arial, "Sans-serif"</span> <strong style="color: white; font-size: 20px;">;</strong>
+    <strong style="color: goldenrod;">}</strong>
+
+</pre>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Selectores:</strong> Los selectores son los <strong>elementos</strong> sobre los que queremos aplicar las <strong>reglas</strong>. Entre los diferentes selectores que hay los más utilizados son:
+                        <ol>
+                            <li>
+                                El nombre del elemento <abbr title="HyperText Markup Language">HTML</abbr>: <code>p</code>, <code>ul</code>, <code>h1</code>...
+                                <br>
+                                Se utiliza cuando queremos aplicar un conjunto de estilos a todos los elementos <abbr title="HyperText Markukp Language">HTML</abbr> que tienen el mismo nombre. Los estilos que definamos haciendo uso del nombre del elemento <abbr title="HyperText Markup Language">HTML</abbr> se aplicarán solos automáticamente.
+<pre>
+
+    <code>p</code>  <strong>{</strong> 
+          <span class="css_style">font-size</span> <strong>:</strong> <span style="color: lightpink;">20px</span> <strong>;</strong>
+    <strong>}</strong>
+    <code>body</code>  <strong>{</strong> 
+          <span class="css_style">background-color</span> <strong>:</strong> <span style="color: lightgoldenrodyellow;">lightgoldenrodyellow</span> <strong>;</strong> 
+    <strong>}</strong>
+
+</pre>
+                            </li>
+                            <li>
+                                Un punto: <code style="font-weight: 900;font-size: 20px;">.</code>
+                                <br>
+                                Irá acompañado de un nombre personalizado a su derecha, se suele utilizar cuando queremos aplicar un conjunto de estilos a un número determinado de elementos <abbr title="HyperText Markup Language">HTML</abbr>. El nombre que elijamos es el que usaremos como valor dentro del atributo <strong class="atributos">class=""</strong>, el cual situaremos dentro de la etiqueta de apertura del elemento al que le vayamos a aplicar el estilo.
+                                <br>
+                                A este selector se le conoce como <strong>clase</strong>.
+<pre>
+
+    <code>.nombre_para_tu_clase</code>  <strong>{</strong> 
+            <span class="css_style">font-size</span> <strong>:</strong> <span style="color: lightpink;">20px</span> <strong>;</strong>
+    <strong>}</strong>
+    <code>.fondo_gris</code>  <strong>{</strong> 
+            <span class="css_style">background-color</span> <strong>:</strong> <span style="color: gray;">gray</span> <strong>;</strong> 
+    <strong>}</strong>
+
+</pre>
+                            </li>
+                            <li>
+                                Una almohadilla: <code style="font-weight: 900;font-size: 20px;">#</code>
+                                <br>
+                                Irá acompañada de un nombre personalizado a su derecha, se suele utilizar cuando queremos aplicar un conjunto de estilos a solo un elemento <abbr title="HyperText Markup Language">HTML</abbr>. El nombre que elijamos es el que usaremos como valor dentro del atributo <strong class="atributos">id=""</strong>, el cual situaremos dentro de la etiqueta de apertura del elemento al que le vayamos a aplicar el estilo.
+                                <br>
+                                A este selector se le conoce como <strong>id</strong>.
+<pre>
+    <code>#nombre_para_tu_id</code>  <strong>{</strong> 
+            <span class="css_style">font-size</span> <strong>:</strong> <span style="color: lightpink;">20px</span> <strong>;</strong>
+    <strong>}</strong>
+    <code>#estilo_header</code>  <strong>{</strong>  
+        <span class="css_style">width</span> <strong>:</strong> <span style="color: rgb(255, 60, 0);">100%</span> <strong>;</strong>
+        <span class="css_style">height</span> <strong>:</strong> <span style="color: rgb(255, 60, 0);">auto</span> <strong>;</strong>
+        <span class="css_style">background-color</span> <strong>:</strong> <span style="color: rgb(255, 60, 0);">orange</span> <strong>;</strong>
+    <strong>}</strong>
+
+</pre>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+                <h3>
+                    Creación de un documento CSS
+                </h3>
+                <p>
+                    A continuaci&oacute;n se expondr&aacute;n el proceso de creaci&oacute;n de un documento <abbr title="Cascading Style Sheet">CSS</abbr> en orden:
+                </p>
+                <ol>
+                    <li>
+                        Crear un <strong>documento de texto</strong> nuevo
+                    </li>
+
+                    <li>
+                        A&ntilde;adir los diferentes selectores con sus respectivas reglas que queramos definir 
+                    </li>
+
+                    <li>
+                        A la hora de guardar el documento, pulsaremos en <strong>guardar como</strong>
+                    </li>
+
+                    <li>
+                        y cuando se muestre el <strong>nombre</strong> y <strong>tipo de archivo</strong>, en la secci&oacute;n tipo elegiremos <em class="atributos">todos los archivos</em>
+                    </li>
+
+                    <li>
+                        finalmente en la secci&oacute;n <strong>nombre</strong> elegiremos el nombre de nuestro archivo pero al final a&ntilde;adiremos <em class="atributos">.css</em> 
+                    </li>
+
+                    <li>
+                        pulsamos en <strong>guardar</strong> y listo.
+                    </li>
+
+                    <li>
+                        En caso de querer modificar el archivo solamente tenemos que hacer click derecho sobre el archivo y abrirlo con un editor de texto. Cuando hayas terminado de modificarlo solo vuelve a repetir los pasos anteriores en orden.
+                    </li>
+                </ol>
+<pre style="color: lightgreen;">
+
+    /* Todos los comentarios irán encerrados entre estos 4 caracteres */
+    /* 
+    Los comentarios pueden ser
+    multilinea
+    */ 
+
+</pre>
+<h3>
+    ¿Como enlazo un documento CSS con un archivo HTML?
+</h3>
+<p>
+    Para enlazar un documento <abbr title="Cascading Style Sheet">CSS</abbr> con un archivo <abbr title="HyperText Markup Language">HTML</abbr> hay que hacer uso de la etiqueta &lt;<code>link</code>&gt; y dentro de ella añadir los atributos <span class="atributos">rel=""</span> con el valor <span>stylesheet</span> y el atributo <span class="atributo">href=""</span> con el valor <span>ruta</span> siendo ruta la ruta hacia tu archivo. Esta etiqueta irá alojada entre las etiquetas &lt;<code>head</code>&gt; y &lt;/<code>head</code>&gt;
+</p>
+<p>
+    <strong>Ejemplo 1:</strong> El documento <abbr title="Cascading Style Sheet">CSS</abbr> se encuentra en la misma carpeta que el archivo <abbr title="HyperText Markup Language">HTML</abbr>
+</p>
+<pre>
+
+    &lt;<code>head</code>&gt;
+        &lt;<code>link</code> <span class="atributos">rel=</span>"<span>stylesheet</span>" <span class="atributos">href=</span>"<span>./style.css</span>"&gt;
+    &lt;/<code>head</code>&gt;
+
+</pre>
+<p>
+    <strong>Ejemplo 2:</strong> El documento <abbr title="Cascading Style Sheet">CSS</abbr> se encuentra dentro de una carpeta que está alojada en la misma ruta que el archivo <abbr title="HyperText Markup Language">HTML</abbr>.
+</p>
+<pre>
+
+    &lt;<code>head</code>&gt;
+        &lt;<code>link</code> <span class="atributos">rel=</span>"<span>stylesheet</span>" <span class="atributos">href=</span>"<span>./nombre_carpeta/style.css</span>"&gt;
+    &lt;/<code>head</code>&gt;
+
+</pre>
+<p>
+    <strong>Ejemplo 3:</strong> El documento <abbr title="Cascading Style Sheet">CSS</abbr> se encuentra dentro de una carpeta que no está alojada en la misma ruta que el archivo <abbr title="HyperText Markup Language">HTML</abbr>.
+</p>
+<pre>
+
+    &lt;<code>head</code>&gt;
+        &lt;<code>link</code> <span class="atributos">rel=</span>"<span>stylesheet</span>" <span class="atributos">href=</span>"<span>../../nombre_carpeta/style.css</span>"&gt;
+    &lt;/<code>head</code>&gt;
+
+</pre>
+<p class="notas">
+    <strong>NOTA</strong> Los archivos <abbr title="Cascading Style Sheet">CSS</abbr> no necesitan ningún elemento por defecto para ejecutarse.
+</p>
+<p class="notas">
+    <strong>NOTA</strong> No olvides de enlazar tu documento <abbr title="Cascading Style Sheet">CSS</abbr> con el archivo <abbr title="HyperText Markup Language">HTML</abbr> al que vas a aplicar los estilos.
+</p>
+<p class="ejercicios">
+    <strong>Ejercicio 1</strong> Crea un documento <abbr title="Cascading Style Sheet">CSS</abbr> y enlazalo con el archivo <abbr title="HyperText Markup Language">HTML</abbr>.
+</p>
+<h3>
+    Tres propiedades CSS muy utilizadas
+</h3>
+<p>
+    <span class="css_style">background-color</span>: Esta propiedad como su nombre indica sirve para cambiar el color de fondo de un elemento <abbr title="HyperText Markukp Language">HTML</abbr>. El valor mas utilizado es el <span class="atributos">hexadecimal</span> y el <span class="atributos">rgb()</span>.
+    <ul>
+        <li>
+            Por ejemplo si utilizamos la propiedad con un valor en hexadecimal se vería algo así:
+<pre>
+
+    <span class="css_style">background-color</span>: <span style="color: #ff0000;">#ff0000</span>;
+
+</pre>
+        </li>
+        <li>
+            Mientras que si usamos un valor rgb(0,0,0) se vería algo así:
+<pre>
+
+    <span class="css_style">background-color</span>: <span style="color: rgb(255, 0, 0);">rgb(255, 0, 0)</span>;
+
+</pre>
+        </li>
+    </ul>
+</p>
+<p>
+    <span class="css_style">color</span>. La propiedad <span class="css_style">color</span> nos permite cambiar el color del texto de un elemento <abbr title="HyperText Markup Language">HTML</abbr>. Al igual que con background-color los valores más utilizados son en hexadecimal o rgb().
+    <ul>
+        <li>
+            Por ejemplo si utilizamos la propiedad con un valor en hexadecimal se vería algo así:
+<pre>
+
+    <span class="css_style">color</span>: <span style="color: #00ffff;">#00ffff</span>;
+
+</pre>
+        </li>
+        <li>
+            Mientras que si usamos un valor rgb(0,0,0) se vería algo así:
+<pre>
+
+    <span class="css_style">color</span>: <span style="color: rgb(255, 0, 255);">rgb(255, 0, 255)</span>;
+
+</pre>
+        </li>
+    </ul>
+</p>
+<p>
+    <span class="css_style">margin</span>, puede ser considerada una de las propiedades más importantes, ya que nos sirve para alinear un elemento, ademas de darle un margen concreto hacia un lado especifico. Entre todas las combinaciones posibles, las más normales y utilizadas son:
+    <ul>
+        <li>
+            Esta combinación permitirá que el elemento se posicione en el centro de la caja que lo contiene.
+<pre>
+
+    <span class="css_style">margin</span>: <span style="color: var(--p_color_a1);">0 auto</span>;
+
+</pre>
+        </li>
+        <li>
+            Esta combinación eliminará todo tipo de margen que pueda tener el elemento.
+<pre>
+    
+    <span class="css_style">margin</span>: <span style="color: var(--p_color_a1);">0</span>;
+
+</pre>
+        </li>
+    </ul>
+</p>
+<p class="notas">
+    <strong>NOTA</strong> Todos los elementos <abbr title="HyperText Markup Language">HTML</abbr> tienen algún estilo aplicados por defecto. Cada navegador aplicará unos estilos independientes por defecto. Por lo que a la hora de diseñar una página o documento hay que pensar si se van a sobreescribir o dejar los que están por defecto.
+</p>
+<p class="notas">
+    <strong>NOTA</strong> Cuando cambies el color de fondo del elemento <code>body</code> veras que queda un recuadro en blanco, eso es el margen y para eliminarlo deberás de hacer uso de uno de los ejemplos facilitados arriba.
+</p>
+<p class="ejercicios">
+    <strong>Ejercicio 1</strong> Cambia el color de fondo al body haciendo uso de un id.
+</p>
+<p class="ejercicios">
+    <strong>Ejercicio 2</strong> Elimina el margen de los elementos body y html haciendo uso de sus nombres.
+</p>
+<p class="ejercicios">
+    <strong>Ejercicio 3</strong> Cambia el color de 2 parrafos haciendo uso de una clase.
+</p>
+<p class="ejercicios">
+    <strong>Ejercicio 4</strong> Cambia el color de todos los encabezados haciendo uso de su nombre.
+</p>
+            </section>
+        </main>
+
+        <footer id="footer"></footer>        
+     </body>
+</html>
